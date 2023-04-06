@@ -1,6 +1,6 @@
 # DAT602_TileWars_XanderC_2023
 
-This is a tile based game created useing C# and MySQL
+This is a tile based game created using C# and MySQL
 
 Game Objective:
 The objective of the game is to gather more items than your opponent. Each item
