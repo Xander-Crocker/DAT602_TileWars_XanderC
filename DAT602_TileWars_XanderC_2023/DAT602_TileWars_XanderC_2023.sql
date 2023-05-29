@@ -17,7 +17,7 @@ begin
 	-- Drop user cant be run with full script?
     -- IF EXISTS cant be used with drop user?
 
-	-- drop user 'XDP'@'localhost'; 
+	drop user 'XDP'@'localhost'; 
     create user 'XDP'@'localhost' identified by '1234'; 
     grant all on DAT602_TileWars_XanderC_2023.* to 'XDP'@'localhost';
 

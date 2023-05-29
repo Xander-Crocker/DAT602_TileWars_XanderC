@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dat602_Project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,36 @@ namespace DAT602_TileWars_XanderC_2023
 {
     public partial class MainWindowForm : Form
     {
+        private LoginForm _login;
+        private PlayerClass _playerClass;
+        private AdminConsoleForm _adminForm;
+
         public MainWindowForm()
         {
             InitializeComponent();
+        }
+
+        public bool ShowDialog(LoginForm login, PlayerClass playerClass)
+        {
+            _login = login;
+            _playerClass = playerClass;
+            return ShowDialog() == DialogResult.OK;
+        }
+
+        private void AdminConsoleButton_Click(object sender, EventArgs e)
+        {
+            _adminForm = new AdminConsoleForm();
+            _playerClass = new PlayerClass();
+
+            // Temp Fix
+            this.Hide();
+            _adminForm.ShowDialog();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            _login.Show();
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

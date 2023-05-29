@@ -28,75 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.NewGameButton = new System.Windows.Forms.Button();
-            this.JoinGameButton = new System.Windows.Forms.Button();
-            this.AdminConsoleButton = new System.Windows.Forms.Button();
-            this.LogOutButton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            NewGameButton = new Button();
+            JoinGameButton = new Button();
+            AdminConsoleButton = new Button();
+            LogOutButton = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(258, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 81);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Tile Wars";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(258, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(274, 81);
+            label1.TabIndex = 4;
+            label1.Text = "Tile Wars";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // NewGameButton
             // 
-            this.NewGameButton.Location = new System.Drawing.Point(322, 158);
-            this.NewGameButton.Name = "NewGameButton";
-            this.NewGameButton.Size = new System.Drawing.Size(144, 69);
-            this.NewGameButton.TabIndex = 0;
-            this.NewGameButton.Text = "New Game";
-            this.NewGameButton.UseVisualStyleBackColor = true;
+            NewGameButton.Location = new Point(322, 158);
+            NewGameButton.Name = "NewGameButton";
+            NewGameButton.Size = new Size(144, 69);
+            NewGameButton.TabIndex = 0;
+            NewGameButton.Text = "New Game";
+            NewGameButton.UseVisualStyleBackColor = true;
             // 
             // JoinGameButton
             // 
-            this.JoinGameButton.Location = new System.Drawing.Point(322, 264);
-            this.JoinGameButton.Name = "JoinGameButton";
-            this.JoinGameButton.Size = new System.Drawing.Size(144, 69);
-            this.JoinGameButton.TabIndex = 1;
-            this.JoinGameButton.Text = "Join Game";
-            this.JoinGameButton.UseVisualStyleBackColor = true;
+            JoinGameButton.Location = new Point(322, 264);
+            JoinGameButton.Name = "JoinGameButton";
+            JoinGameButton.Size = new Size(144, 69);
+            JoinGameButton.TabIndex = 1;
+            JoinGameButton.Text = "Join Game";
+            JoinGameButton.UseVisualStyleBackColor = true;
             // 
             // AdminConsoleButton
             // 
-            this.AdminConsoleButton.Location = new System.Drawing.Point(694, 385);
-            this.AdminConsoleButton.Name = "AdminConsoleButton";
-            this.AdminConsoleButton.Size = new System.Drawing.Size(94, 53);
-            this.AdminConsoleButton.TabIndex = 2;
-            this.AdminConsoleButton.Text = "Admin Controles";
-            this.AdminConsoleButton.UseVisualStyleBackColor = true;
+            AdminConsoleButton.Location = new Point(694, 385);
+            AdminConsoleButton.Name = "AdminConsoleButton";
+            AdminConsoleButton.Size = new Size(94, 53);
+            AdminConsoleButton.TabIndex = 2;
+            AdminConsoleButton.Text = "Admin Controles";
+            AdminConsoleButton.UseVisualStyleBackColor = true;
+            AdminConsoleButton.Click += AdminConsoleButton_Click;
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(12, 385);
-            this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(94, 53);
-            this.LogOutButton.TabIndex = 9;
-            this.LogOutButton.Text = "Log Out";
-            this.LogOutButton.UseVisualStyleBackColor = true;
+            LogOutButton.Location = new Point(12, 385);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(94, 53);
+            LogOutButton.TabIndex = 9;
+            LogOutButton.Text = "Log Out";
+            LogOutButton.UseVisualStyleBackColor = true;
+            LogOutButton.Click += LogOutButton_Click;
             // 
             // MainWindowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.LogOutButton);
-            this.Controls.Add(this.AdminConsoleButton);
-            this.Controls.Add(this.JoinGameButton);
-            this.Controls.Add(this.NewGameButton);
-            this.Controls.Add(this.label1);
-            this.Name = "MainWindowForm";
-            this.Text = "Main Window";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(LogOutButton);
+            Controls.Add(AdminConsoleButton);
+            Controls.Add(JoinGameButton);
+            Controls.Add(NewGameButton);
+            Controls.Add(label1);
+            Name = "MainWindowForm";
+            Text = "Main Window";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
