@@ -63,6 +63,7 @@
             JoinGameButton.TabIndex = 1;
             JoinGameButton.Text = "Join Game";
             JoinGameButton.UseVisualStyleBackColor = true;
+            JoinGameButton.Click += JoinGameButton_Click;
             // 
             // AdminConsoleButton
             // 

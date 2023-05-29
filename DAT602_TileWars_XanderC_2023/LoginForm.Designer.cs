@@ -1,7 +1,6 @@
 ﻿namespace DAT602_TileWars_XanderC_2023
 {
-    private MainWindowForm _home;
-    private PlayerClass _playerClass;
+    
 
     partial class LoginForm
     {
@@ -46,6 +45,7 @@
             LoginLoginButton.TabIndex = 2;
             LoginLoginButton.Text = "Login";
             LoginLoginButton.UseVisualStyleBackColor = true;
+            LoginLoginButton.Click += LoginLoginButton_Click;
             // 
             // LoginRegistrationButton
             // 

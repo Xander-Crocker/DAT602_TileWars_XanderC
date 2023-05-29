@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAT602_TileWars_XanderC_2023;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,26 @@ namespace DAT602_TileWars_XanderC_2023
         public RegistrationForm()
         {
             InitializeComponent();
+        }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            DatabaseAccessObject aDB = new DatabaseAccessObject();
+            string aMessage = aDB.AddUser(this.EmailTextbox.Text, this.EmailTextbox.Text);
+            MessageBox.Show(aMessage);
+
+            DialogResult = DialogResult.OK;
+
+            this.Hide();
+            LoginForm _login = new LoginForm();
+            _login.ShowDialog();
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm _login = new LoginForm();
+            _login.ShowDialog();
         }
     }
 }

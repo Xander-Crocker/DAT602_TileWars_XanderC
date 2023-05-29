@@ -1,4 +1,6 @@
-namespace DAT602_TileWars_XanderC_2023
+using DAT602_TileWars_XanderC_2023;
+
+namespace Dat602_TileWars_XanderC_2023
 {
     internal static class Program
     {

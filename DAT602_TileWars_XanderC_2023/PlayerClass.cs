@@ -1,4 +1,4 @@
-﻿using Dat602_Project;
+﻿using DAT602_TileWars_XanderC_2023;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DAT602_TileWars_XanderC_2023
 {
-    internal class PlayerClass
+    public class PlayerClass
     {
         private String _FirstName;
         private String _LastName;

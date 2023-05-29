@@ -1,4 +1,4 @@
-﻿using Dat602_Project;
+﻿using DAT602_TileWars_XanderC_2023;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ namespace DAT602_TileWars_XanderC_2023
         {
             _login = login;
             _playerClass = playerClass;
-            return ShowDialog() == DialogResult.OK;
+            return ShowDialog() == DialogResult.OK; 
         }
 
         private void AdminConsoleButton_Click(object sender, EventArgs e)
@@ -43,6 +43,13 @@ namespace DAT602_TileWars_XanderC_2023
         {
             _login.Show();
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void JoinGameButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GameBoardForm _gameBoardForm = new GameBoardForm();
+            _gameBoardForm.ShowDialog();
         }
     }
 }

@@ -1,4 +1,4 @@
-using Dat602_Project;
+using DAT602_TileWars_XanderC_2023;
 using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,14 @@ namespace DAT602_TileWars_XanderC_2023
             InitializeComponent();
         }
 
-        private void LoginButton_Click(LoginForm login, PlayerClass playerClass)
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrationForm _Register = new RegistrationForm();
+            _Register.ShowDialog();
+        }
+
+        private void LoginLoginButton_Click(object sender, EventArgs e)
         {
             DatabaseAccessObject loginDBAccess = new DatabaseAccessObject();
             string aMessage = loginDBAccess.Login(this.LoginLoginButton.Text, this.LoginLoginButton.Text);
@@ -36,12 +43,5 @@ namespace DAT602_TileWars_XanderC_2023
                 this.Show();
             }
         }
-
-        private void RegistrationButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegistrationForm _Register = new RegistrationForm();
-            _Register.ShowDialog();
-        }   
     }
 }
