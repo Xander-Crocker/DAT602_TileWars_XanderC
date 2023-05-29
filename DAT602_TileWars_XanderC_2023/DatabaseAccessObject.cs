@@ -145,8 +145,7 @@ namespace DAT602_TileWars_XanderC_2023
             bP.Value = pPassword;
             p.Add(bP);
 
-            DataSet aDataSet = MySqlHelper.ExecuteDataset(
-                mySqlConnection, "Login(@Username,@Password)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(mySqlConnection, "Login(@Username,@Password)", p.ToArray());
             return aDataSet.Tables[0].Rows[0].Field<String>("Message");
         }
 
@@ -162,7 +161,7 @@ namespace DAT602_TileWars_XanderC_2023
             aPass.Value = pPassword;
             p.Add(aPass);
 
-            DataSet aDataSet = MySqlHelper.ExecuteDataset(mySqlConnection, "Call AddNewUser(@UserName, @Password)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(mySqlConnection, "Call AddNewUser(@UserName, @Password)", p.ToArray());
 
             return aDataSet.Tables[0].Rows[0].Field<string>("Message");
         }
